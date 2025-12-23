@@ -16,7 +16,15 @@ public class BookSearchService {
         this.client = client;
     }
 
-    public List<GutendexBookDTO> search(String query) {
+    public List<GutendexBookDTO> searchByTitle(String title) {
+        return searchRaw(title);
+    }
+
+    public List<GutendexBookDTO> searchByAuthor(String author) {
+        return searchRaw(author);
+    }
+
+    private List<GutendexBookDTO> searchRaw(String query) {
         GutendexResponseDTO response = client.searchBooks(query);
         if (response == null || response.results() == null) return List.of();
         return response.results();
