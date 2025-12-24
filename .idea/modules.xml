@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/literalura.iml" filepath="$PROJECT_DIR$/demo/literalura.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/literalura-challenge-one-G9.iml" filepath="$PROJECT_DIR$/.idea/literalura-challenge-one-G9.iml" />
     </modules>
   </component>

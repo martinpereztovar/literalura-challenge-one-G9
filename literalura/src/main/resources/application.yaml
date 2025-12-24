@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: literalura
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/literalura
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
