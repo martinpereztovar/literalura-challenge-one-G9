@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import org.springframework.data.domain.PageRequest;
 
 
 @Service
@@ -127,6 +128,10 @@ public class CatalogService {
                 .findByBirthYearLessThanEqualAndDeathYearIsNull(year));
 
         return List.copyOf(alive);
+    }
+
+    public List<Book> top10MostDownloaded() {
+        return bookRepository.findByOrderByDownloadCountDesc(PageRequest.of(0, 10));
     }
 
 }
